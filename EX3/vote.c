@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int votes[5], maxp;
+	int votes[5], maxpos;
 	int max = 0;
 
 	for(int i=0; i<5; i++)
@@ -13,10 +13,10 @@ int main(void)
 		if(max < votes[i])
 		{
 			max = votes[i];
-			maxp = i+1;
+			maxpos = i+1;
 		}
 	}
 
-	printf("Candidate %d wins with %d votes.\n", maxp, max);
+	printf("Candidate %d wins with %d votes.\n", maxpos, max);
 	return 0;
 }

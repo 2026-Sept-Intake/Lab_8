@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int scores[11], hpos;
+	int scores[11], hposition;
 	int hscore = 0;
 	
 	for(int i=0; i<11; i++)
@@ -12,10 +12,10 @@ int main(void)
 		if(hscore < scores[i])
 		{
 			hscore = scores[i];
-			hpos = i+1;
+			hposition = i+1;
 		}
 	}
 
-	printf("Highest score: %d by player %d\n", hscore, hpos);
+	printf("Highest score: %d by player %d\n", hscore, hposition);
 	return 0;
 }
