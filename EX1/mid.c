@@ -22,7 +22,7 @@ int main(void)
 		if(marks[i] > avg)
 		{
 			printf("%d", marks[i]);
-			if(i==9)
+			if(i == 9)
 				break;
 			else
 				printf(",");

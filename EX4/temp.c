@@ -20,7 +20,9 @@ int main(void)
 }
 
 void max(int arr[])
-{
+{	
+	int max = arr[0];
+	int maxp = 1;
         for( int i=0; i<7; i++)
         {
                 if(max < arr[i])
@@ -33,7 +35,9 @@ void max(int arr[])
 }
 
 void min(int arr[])
-{
+{	
+	int min = arr[0];
+	int minp = 1;
         for( int i=0; i<7; i++)
         {
                 if(min > arr[i])
