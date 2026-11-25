@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-void search_hottemp(int rec[]);
-void search_coldtemp(int rec[]);
+void search_hottemp(const int rec[]);
+void search_coldtemp(const int rec[]);
+
 int temp,hday,cday,hdtemp,cdtemp;
 int rec[7];
 
@@ -16,12 +17,13 @@ int main (void)
 	search_coldtemp(rec);
 }
 
-void search_hottemp(void)
+void search_hottemp(const int rec[])
 {
+	hdtemp = rec[0];
+	hday = 1;
+
 	for(int i=0; i<7;i++)
 	{
-		if(i==0)
-			hdtemp = rec[0];
 
 		if(hdtemp<rec[i])
 		{
@@ -29,21 +31,22 @@ void search_hottemp(void)
 			hday = i+1;
 		}
 	}
-	printf("Hottest day:Day %d with %d degrees.",hday,hdtemp);
+	printf("Hottest day:Day %d with %d degrees.\n",hday,hdtemp);
 }
 
-void search_coldtemp(void)
+void search_coldtemp(const int rec[])
 {
+	cdtemp = rec[0];
+	cday = 1;
+
 	for (int i =0; i<7;i++)
 	{	
-		if(i==0)
-			cdtemp = rec[0];
 		if(cdtemp>rec[i])
 		{
 			cdtemp = rec[i];
 			cday = i+1;
 		}
 	}
-	printf("Coldest day:Day %d with %d degrees.",cday,cdtemp);
+	printf("Coldest day:Day %d with %d degrees\n.",cday,cdtemp);
 
 }
